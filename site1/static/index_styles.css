@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2f8f4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.global-nav {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.global-nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.global-nav a:hover {
+    background-color: #575757;
+}
+
+.global-nav a.active {
+    background-color: #4CAF50;
+    font-weight: bold;
+}
+
+
+.main-content {
+    margin-top: 40px;
+    margin-bottom: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.main-content h3 {
+    font-size: 1.4em;
+    color: green;
+    margin-top: 20px;
+}
+
+.main-content p {
+    text-align: justify;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.main-content ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+.main-content ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+footer {
+    bottom: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0; 
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный блог капибары</title>
+    <link rel="stylesheet" type="text/css" href="/site1/static/index_styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Личный блог капибары</h1>
+    </header>
+    <nav class="global-nav">
+        <a href="/site1/index.html">Главная</a>
+        <a href="/site1/info.html">О капибарах</a>
+        <a href="/site1/form.html">Форма для отправки данных</a>
+        <a href="/site1/dom.html">DOM_JS. Считываем информацию из DOM</a>
+        <a href="/site1/translator.html">Изменяем кириллицу на латиницу по клику</a>
+        <a href="/site1/algorithm.html" class="active">Решение алгоритмической задачи</a>
+    </nav>
+    <main class="main-content">
+        <header>
+            <h1>Изменяем кириллицу на латиницу по клику</h1>
+        </header>
+
+        <section class="passport-page">
+            <h3>Страница 2 - Паспорт</h3>
+            <p>Фамилия: <span id="last-name">Иванов</span></p>
+            <p>Имя: <span id="first-name">Иван</span></p>
+            <p>Год рождения: <span id="birth-year">1990</span></p>
+        </section>
+
+        <section class="passport-page">
+            <h3>Страница 3 - Паспорт</h3>
+            <p>Место рождения: <span id="birth-place">Москва</span></p>
+            <p>Дата выдачи: <span id="issue-date">10.05.2010</span></p>
+        </section>
+
+        <button id="change-btn">Изменить данные на латиницу</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 Личный блог капибары. Все права капибар защищены.</p>
+    </footer>
+    <script src="/site1/static/translator_scripts.js"></script>
+</body>
+</html>

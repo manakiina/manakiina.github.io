@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный блог капибары</title>
+    <link rel="stylesheet" type="text/css" href="/site1/static/index_styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Личный блог капибары</h1>
+    </header>
+    <nav class="global-nav">
+        <a href="/site1/index.html">Главная</a>
+        <a href="/site1/info.html">О капибарах</a>
+        <a href="/site1/form.html">Форма для отправки данных</a>
+        <a href="/site1/dom.html">DOM_JS. Считываем информацию из DOM</a>
+        <a href="/site1/translator.html">Изменяем кириллицу на латиницу по клику</a>
+        <a href="/site1/algorithm.html" class="active">Решение алгоритмической задачи</a>
+    </nav>
+    <main class="main-content">
+        <header>
+            <h1>Решение алгоритмической задачи</h1>
+        </header>
+
+        <section class="algorithm-section">
+            <h3>Определение типа места в вагоне</h3>
+            <form id="seat-form">
+                <label for="seat-number">Введите номер места:</label>
+                <input type="number" id="seat-number" name="seat-number" required>
+                <button type="submit">Рассчитать</button>
+            </form>
+            <div id="result" style="margin: 20px auto"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Личный блог капибары. Все права капибар защищены.</p>
+    </footer>
+    <script src="/site1/static/algorithm_scripts.js"></script>
+</body>
+</html>
+ 

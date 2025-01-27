@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный блог капибары</title>
+    <link rel="stylesheet" type="text/css" href="/site1/static/index_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/site1/static/form_styles.css"/>
+</head>
+<body>
+    <header>
+        <h1>Личный блог капибары</h1>
+    </header>
+    <nav class="global-nav">
+        <a href="/site1/index.html">Главная</a>
+        <a href="/site1/info.html">О капибарах</a>
+        <a href="/site1/form.html">Форма для отправки данных</a>
+        <a href="/site1/dom.html">DOM_JS. Считываем информацию из DOM</a>
+        <a href="/site1/translator.html">Изменяем кириллицу на латиницу по клику</a>
+        <a href="/site1/algorithm.html" class="active">Решение алгоритмической задачи</a>
+    </nav>
+    <main class="main-content">
+        <h2>Форма отправки данных</h2>
+        <form action="https://example.com/contact" method="post">
+            <h3>Личные контактные данные</h3>
+            <label for="last-name">Фамилия:</label>
+            <input type="text" id="last-name" name="last_name" required><br>
+
+            <label for="first-name">Имя:</label>
+            <input type="text" id="first-name" name="first_name" required><br>
+
+            <label for="group">Группа:</label>
+            <input type="text" id="group" name="group" required><br>
+
+            <label for="phone">Мобильный телефон:</label>
+            <input type="text" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 цифр" required><br>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message-date">Дата отправки сообщения:</label>
+            <input type="date" id="message-date" name="message_date" required><br>
+
+            <input type="hidden" name="form_type" value="contact">
+
+            <button type="submit">Отправить</button>
+        </form>
+        <hr>
+        <form action="https://example.com/orders" method="post">
+            <h3>Данные заказа</h3>
+
+            <label for="product">Название товара:</label>
+            <input type="text" id="product" name="product" required><br>
+
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required><br>
+
+            <label>Выберите способ доставки:</label><br>
+            <input type="radio" id="delivery-standard" name="delivery" value="standard" checked>
+            <label for="delivery-standard">Стандартная</label><br>
+            <input type="radio" id="delivery-express" name="delivery" value="express">
+            <label for="delivery-express">Экспресс</label><br>
+
+            <label for="gift">Добавить в подарок:</label>
+            <input type="checkbox" id="gift" name="gift" value="yes"><br>
+
+            <label for="review">Оставьте отзыв:</label>
+            <input type="text" id="review" name="review" placeholder="Ваш отзыв"><br>
+
+            <label for="password">Придумайте пароль для отслеживания:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="order-date">Дата заказа:</label>
+            <input type="date" id="order-date" name="order_date" required><br>
+
+            <input type="hidden" name="form_type" value="order">
+
+            <button type="submit">Оформить заказ</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Личный блог капибары. Все права капибар защищены.</p>
+    </footer>
+</body>
+</html>
