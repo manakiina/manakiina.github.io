@@ -10,54 +10,84 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <style>
+    .section-content {
+        display: none;
+    }
+    .active-section {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/site2/index.html">Пиццерия Онлайн</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/site2/about.html">О пиццерии</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/site2/order.html">Сделать заказ</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="/site2/index.html">Пиццерия Онлайн</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/site2/about.html">О пиццерии</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/site2/order.html">Сделать заказ</a>
+                </li>
+            </ul>
+        </div>
     </div>
   </nav>
 
+  <nav id="main-navbar" class="navbar navbar-expand-lg   mt-5 pt-4">
+      <div class="container-sm">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sectionNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="sectionNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" onclick="showSection('about')">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" onclick="showSection('why')">Почему выбирают нас?</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
   <main class="container mt-5 pt-5">
-    <section class="py-5">
-      <div class="text-center">
-        <h1>Добро пожаловать в Пиццерию Онлайн!</h1>
-        <p class="lead">Мы гордимся тем, что предлагаем лучшие пиццы в городе!</p>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <h3>О нас</h3>
-          <p>
-            Наша пиццерия была основана в 2020 году с целью объединить людей за
-            вкусной и ароматной пиццей. Мы используем только свежие
-            ингредиенты и традиционные рецепты, чтобы каждый кусочек
-            приносил удовольствие.
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h3>Почему выбирают нас?</h3>
-          <ul>
-            <li>Только свежие и качественные ингредиенты.</li>
-            <li>Широкий ассортимент пицц и напитков.</li>
-            <li>Быстрая доставка прямо к вашему порогу.</li>
-            <li>Дружелюбный персонал и отличный сервис.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      <section id="about" class="section-content active-section">
+          <div class="text-center">
+              <h1>О нас</h1>
+              <p>Наша пиццерия была основана в 2020 году с целью объединить людей за вкусной и ароматной пиццей.</p>
+              <p>Мы используем только свежие ингредиенты и традиционные рецепты, чтобы каждый кусочек приносил удовольствие.</p>
+          </div>
+      </section>
+
+      <section id="why" class="section-content">
+          <div class="text-center">
+              <h1>Почему выбирают нас?</h1>
+              <ul class="list-unstyled">
+                  <li>✅ Только свежие и качественные ингредиенты.</li>
+                  <li>✅ Широкий ассортимент пицц и напитков.</li>
+                  <li>✅ Быстрая доставка прямо к вашему порогу.</li>
+                  <li>✅ Дружелюбный персонал и отличный сервис.</li>
+              </ul>
+          </div>
+      </section>
   </main>
+
+  <script>
+      function showSection(sectionId) {
+          document.querySelectorAll('.section-content').forEach(section => {
+              section.classList.remove('active-section');
+          });
+          document.getElementById(sectionId).classList.add('active-section');
+      }
+  </script>
 
   <footer class="text-center py-3">
     <p>&copy; 2025 Онлайн Пиццерия. Все права защищены.</p>

@@ -1,0 +1,16 @@
+.passport-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.passport-image {
+    display: block;
+    margin: 10px auto;
+}
+
+.passport-page {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
