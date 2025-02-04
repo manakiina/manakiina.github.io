@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный блог капибары</title>
     <link rel="stylesheet" type="text/css" href="/site1/static/index_styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/site1/static/dom_styles.css"/>
 </head>
 <body>
     <header>
@@ -23,18 +24,18 @@
             <h1>Изменяем кириллицу на латиницу по клику</h1>
         </header>
 
-        <section class="passport-page">
-            <h3>Страница 2 - Паспорт</h3>
-            <p>Фамилия: <span id="last-name">Иванов</span></p>
-            <p>Имя: <span id="first-name">Иван</span></p>
-            <p>Год рождения: <span id="birth-year">1990</span></p>
-        </section>
-
-        <section class="passport-page">
-            <h3>Страница 3 - Паспорт</h3>
-            <p>Место рождения: <span id="birth-place">Москва</span></p>
-            <p>Дата выдачи: <span id="issue-date">10.05.2010</span></p>
-        </section>
+        <div class="passport-container">
+            <img src="/site1/images/passport.jpg" alt="Паспорт" class="passport-image">
+            <img src="/site1/images/logo.png" alt="Фото" style="position: absolute; top:61%; left:21%; width: 17%; height: 22%;">
+            <section class="passport-page">
+                <p style="position: absolute; top: 53%; left:50%"><span id="last-name">Манакина</span></p>
+                <p style="position: absolute; top: 60%; left:50%"><span id="first-name">Милена</span></p>
+                <p style="position: absolute; top: 64%; left:50%"><span id="patronymic">Романовна</span></p>
+                <p style="position: absolute; top: 68%; left:60%"><span id="birth-date">07.09.2004</span></p>
+                <p style="position: absolute; top: 71%; left:50%"><span id="birth-place">Москва</span></p>
+                <p style="position: absolute; top: 20%; left:30%"><span id="issue-date">20.09.2024</span></p>
+            </section>
+        </div>
 
         <button id="change-btn">Изменить данные на латиницу</button>
     </main>

@@ -15,17 +15,17 @@ function transliterate(text) {
 }
 
 document.getElementById('change-btn').addEventListener('click', function() {
-    const lastName = document.getElementById('last-name').innerText;
-    const firstName = document.getElementById('first-name').innerText;
-    const birthYear = document.getElementById('birth-year').innerText;
+    const lastName = document.getElementById('last-name').textContent;
+    const firstName = document.getElementById('first-name').textContent;
+    const patronymic = document.getElementById('patronymic').textContent;
+    const birthDate = document.getElementById('birth-date').textContent;
+    const birthPlace = document.getElementById('birth-place').textContent;
+    const issueDate = document.getElementById('issue-date').textContent;
 
-    document.getElementById('last-name').innerText = transliterate(lastName);
-    document.getElementById('first-name').innerText = transliterate(firstName);
-    document.getElementById('birth-year').innerText = transliterate(birthYear);
-
-    const birthPlace = document.getElementById('birth-place').innerText;
-    const issueDate = document.getElementById('issue-date').innerText;
-
-    document.getElementById('birth-place').innerText = transliterate(birthPlace);
-    document.getElementById('issue-date').innerText = transliterate(issueDate);
+    document.getElementById('last-name').textContent = transliterate(lastName);
+    document.getElementById('first-name').textContent = transliterate(firstName);
+    document.getElementById('patronymic').textContent = transliterate(patronymic);
+    document.getElementById('birth-date').textContent = transliterate(birthDate);
+    document.getElementById('birth-place').textContent = transliterate(birthPlace);
+    document.getElementById('issue-date').textContent = transliterate(issueDate);
 });
